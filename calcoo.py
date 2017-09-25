@@ -14,7 +14,7 @@ class Calculadora():
     def minus (self):
         return self.operando1 - self.operando2    
 
-
+    
 if __name__ == "__main__":
     try:
         operando1 = int(sys.argv[1])
