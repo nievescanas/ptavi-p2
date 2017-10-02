@@ -10,7 +10,6 @@ class CalcPlus(calcoohija.CalcHija):
         self.operando1 = operando1
         self.operando2 = operando2
 
-
 if __name__ == "__main__":
 
     archivo = open(sys.argv[1],"r")
@@ -21,47 +20,34 @@ if __name__ == "__main__":
 
         operando1 = int(operandos[1])
         operando2 = int(operandos[2])
-    
-
+ 
         calculator = CalcPlus(operando1, operando2)
 
         if operandos[0] == "multiplicar":
-            operandos = operandos [3:]
             res = calculator.multiply(operando1, operando2)
      
-            for operador in operandos:
-                operando1 = int(res)
-                operando2 = int(operador)
-                res = calculator.multiply(operando1, operando2)
+            for operador in operandos[3:]:
+                res = calculator.multiply(res, int(operador))
     
         elif operandos[0] == "dividir":            
-            operandos = operandos [3:]
             res = calculator.divide(operando1, operando2)
      
-            for operador in operandos:
-                operando1 = int(res)
-                operando2 = int(operador)
-                res = calculator.divide(operando1, operando2)
+            for operador in operandos[3:]:
+                res = calculator.divide(res, int(operador))
 
         elif operandos[0] == "suma": 
-            operandos = operandos [3:]
             res = calculator.plus(operando1, operando2)
      
-            for operador in operandos:
-                operando1 = int(res)
-                operando2 = int(operador)
-                res = calculator.plus(operando1, operando2)
+            for operador in operandos[3:]:
+                res = calculator.plus(res, int(operador))
 
         elif operandos[0] == "resta":
-            operandos = operandos [3:]
             res = calculator.minus(operando1, operando2)
      
-            for operador in operandos:
-                operando1 = int(res)
-                operando2 = int(operador)
-                res = calculator.minus(operando1, operando2)
+            for operador in operandos[3:]:
+                res = calculator.minus(res, int(operador))
         else:
-            sys.exit('Operación sólo puede ser sumar o restar.')
+            sys.exit('Calculadora sólo puede ser: sumar, restar, dividir o multiplicar.')
 
         print (res)
 archivo.close() 
