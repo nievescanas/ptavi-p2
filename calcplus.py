@@ -27,43 +27,39 @@ if __name__ == "__main__":
 
         if operandos[0] == "multiplicar":
             operandos = operandos [3:]
-            res = calculator.multiply()
+            res = calculator.multiply(operando1, operando2)
      
             for operador in operandos:
                 operando1 = int(res)
                 operando2 = int(operador)
-                calculator = CalcPlus(operando1, operando2)
-                res = calculator.multiply()
+                res = calculator.multiply(operando1, operando2)
     
         elif operandos[0] == "dividir":            
             operandos = operandos [3:]
-            res = calculator.divide()
+            res = calculator.divide(operando1, operando2)
      
             for operador in operandos:
                 operando1 = int(res)
                 operando2 = int(operador)
-                calculator = CalcPlus(operando1, operando2)
-                res = calculator.divide()
+                res = calculator.divide(operando1, operando2)
 
         elif operandos[0] == "suma": 
             operandos = operandos [3:]
-            res = calculator.plus()
+            res = calculator.plus(operando1, operando2)
      
             for operador in operandos:
                 operando1 = int(res)
                 operando2 = int(operador)
-                calculator = CalcPlus(operando1, operando2)
-                res = calculator.plus()
+                res = calculator.plus(operando1, operando2)
 
         elif operandos[0] == "resta":
             operandos = operandos [3:]
-            res = calculator.minus()
+            res = calculator.minus(operando1, operando2)
      
             for operador in operandos:
                 operando1 = int(res)
                 operando2 = int(operador)
-                calculator = CalcPlus(operando1, operando2)
-                res = calculator.minus()
+                res = calculator.minus(operando1, operando2)
         else:
             sys.exit('Operación sólo puede ser sumar o restar.')
 

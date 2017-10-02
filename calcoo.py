@@ -4,15 +4,12 @@
 import sys
 
 class Calculadora():
-    def __init__(self, operando1 , operando2):
-        self.operando1 = operando1
-        self.operando2 = operando2
         
-    def plus (self):
-        return self.operando1 + self.operando2
+    def plus (self, operando1 , operando2):
+        return operando1 + operando2
 
-    def minus (self):
-        return self.operando1 - self.operando2    
+    def minus (self, operando1 , operando2):
+        return operando1 - operando2    
 
     
 if __name__ == "__main__":
