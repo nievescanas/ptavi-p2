@@ -5,14 +5,11 @@ import sys
 import calcoo
 
 class CalcHija(calcoo.Calculadora):
-    def __init__(self, operando1 , operando2):
-        self.operando1 = operando1
-        self.operando2 = operando2
 
-    def multiply (self):
+    def multiply (self, operando1 , operando2):
         return self.operando1 * self.operando2
 
-    def divide (self):
+    def divide (self, operando1 , operando2):
         return self.operando1 / self.operando2 
 
 
