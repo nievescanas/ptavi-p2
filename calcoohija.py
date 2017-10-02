@@ -4,16 +4,18 @@
 import sys
 import calcoo
 
+
 class CalcHija(calcoo.Calculadora):
 
-    def multiply (self, operando1 , operando2):
+    def multiply(self, operando1, operando2):
         return operando1 * operando2
 
-    def divide (self, operando1 , operando2):
-        return operando1 / operando2 
+    def divide(self, operando1, operando2):
+        return operando1 / operando2
 
 
 if __name__ == "__main__":
+
     try:
         operando1 = int(sys.argv[1])
         operando2 = int(sys.argv[3])
@@ -35,6 +37,5 @@ if __name__ == "__main__":
     elif sys.argv[2] == "resta":
         res = calculator.minus()
     else:
-        sys.exit('Calculadora sólo puede ser: sumar, restar, dividir o multiplicar.')
-    
+        sys.exit('Calculadora: sumar, restar, dividir o multiplicar.')
     print(res)
