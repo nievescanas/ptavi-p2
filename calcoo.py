@@ -3,16 +3,17 @@
 
 import sys
 
+
 class Calculadora():
-        
-    def plus (self, operando1 , operando2):
+    def plus(self, operando1, operando2):
         return operando1 + operando2
 
-    def minus (self, operando1 , operando2):
-        return operando1 - operando2    
+    def minus(self, operando1, operando2):
+        return operando1 - operando2
 
-    
+
 if __name__ == "__main__":
+
     try:
         operando1 = int(sys.argv[1])
         operando2 = int(sys.argv[3])
@@ -27,5 +28,4 @@ if __name__ == "__main__":
         res = objeto.minus()
     else:
         sys.exit('Operación sólo puede ser sumar o restar.')
-    
     print(res)
