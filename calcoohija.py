@@ -7,10 +7,10 @@ import calcoo
 class CalcHija(calcoo.Calculadora):
 
     def multiply (self, operando1 , operando2):
-        return self.operando1 * self.operando2
+        return operando1 * operando2
 
     def divide (self, operando1 , operando2):
-        return self.operando1 / self.operando2 
+        return operando1 / operando2 
 
 
 if __name__ == "__main__":
@@ -35,6 +35,6 @@ if __name__ == "__main__":
     elif sys.argv[2] == "resta":
         res = calculator.minus()
     else:
-        sys.exit('Operación sólo puede ser: sumar, restar, dividir o multiplicar.')
+        sys.exit('Calculadora sólo puede ser: sumar, restar, dividir o multiplicar.')
     
     print(res)
